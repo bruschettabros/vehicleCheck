@@ -14,7 +14,7 @@
         <h2>Vehicle search</h2>
     </div>
     <div class="container">
-        <vehicle-search/>
+        <vehicle-search />
     </div>
 </div>
 </body>

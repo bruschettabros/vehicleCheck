@@ -2,11 +2,9 @@ up:
 	sail up -d
 down:
 	sail down
-test:
+seed:
+	sail artisan db:seed
+test-frontend:
+	sail npm run test
+test-backend:
 	sail artisan test
-install-frontend:
-	npm install
-install-backend:
-	sail composer install
-build-frontend:
-	sail npm run dev

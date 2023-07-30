@@ -3,17 +3,21 @@
     "type": "module",
     "scripts": {
         "dev": "vite --host",
-        "build": "vite build"
+        "build": "vite build",
+        "test": "vitest"
     },
     "devDependencies": {
         "@popperjs/core": "^2.11.6",
+        "@testing-library/vue": "^7.0.0",
         "@vitejs/plugin-vue": "^4.2.3",
         "@vue/shared": "^3.3.4",
         "axios": "^1.1.2",
         "bootstrap": "^5.2.3",
+        "happy-dom": "^10.5.2",
         "laravel-vite-plugin": "^0.7.5",
         "sass": "^1.56.1",
         "vite": "^4.0.0",
+        "vitest": "^0.33.0",
         "vue": "^3.2.36"
     },
     "dependencies": {

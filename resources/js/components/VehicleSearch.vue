@@ -1,4 +1,6 @@
 <script>
+import axios from 'axios';
+
 export default {
     data() {
         return {
@@ -20,8 +22,8 @@ export default {
             this.formData.registration = null;
             this.vehicles = [];
         },
-        handleSubmit() {
-            axios
+        async handleSubmit() {
+            await axios
                 .get('/api/vehicles', {
                     params: this.formData,
                 })
