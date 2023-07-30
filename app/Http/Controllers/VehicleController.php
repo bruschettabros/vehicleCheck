@@ -9,9 +9,9 @@ use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class VehicleController extends Controller
 {
-    public function get(VehicleRequest $request) : AnonymousResourceCollection
+    public function get(VehicleRequest $request): AnonymousResourceCollection
     {
-        $vehicles = Vehicle::where(static function($query) use ($request) {
+        $vehicles = Vehicle::where(static function ($query) use ($request) {
             $query->MakeLike($request->input('make'))
                 ->ModelLike($request->input('model'))
                 ->RegistrationLike($request->input('registration'));

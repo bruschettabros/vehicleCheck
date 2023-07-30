@@ -9,6 +9,7 @@ use Tests\TestCase;
 class VehicleTest extends TestCase
 {
     use LazilyRefreshDatabase;
+
     /**
      * A basic feature test example.
      */
@@ -33,7 +34,7 @@ class VehicleTest extends TestCase
         $response->assertJson(['data' => []]);
     }
 
-    public function testApiReturnsWithFullRegistration() : void
+    public function testApiReturnsWithFullRegistration(): void
     {
         Vehicle::factory()->count(5)->create();
         $vehicle = Vehicle::first();
@@ -53,7 +54,7 @@ class VehicleTest extends TestCase
         ]]);
     }
 
-    public function testApiReturnsWithPartialRegistration() : void
+    public function testApiReturnsWithPartialRegistration(): void
     {
         $vehicleOne = Vehicle::factory()->create([
             'registration' => 'ABC123',
@@ -108,7 +109,7 @@ class VehicleTest extends TestCase
         ]]);
     }
 
-    public function testApiReturnsWithMake() : void
+    public function testApiReturnsWithMake(): void
     {
         $vehicleOne = Vehicle::factory()->create([
             'make' => 'Ford',
@@ -163,7 +164,7 @@ class VehicleTest extends TestCase
         ]]);
     }
 
-    public function testApiReturnsWithModel() : void
+    public function testApiReturnsWithModel(): void
     {
         $vehicleOne = Vehicle::factory()->create([
             'make' => 'Ford',
@@ -215,7 +216,7 @@ class VehicleTest extends TestCase
         ]]);
     }
 
-    public function testApiReturnsWithMultipleInputs() : void
+    public function testApiReturnsWithMultipleInputs(): void
     {
         $vehicleOne = Vehicle::factory()->create([
             'make' => 'Ford',
