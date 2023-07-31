@@ -29,11 +29,11 @@ make up
 ### Testing
 You can run FE tests with:
 ```
-test-frontend
+make test-frontend
 ```
 And BE tests with:
 ```
-test-backend
+make test-backend
 ```
 
 ### Good to know
